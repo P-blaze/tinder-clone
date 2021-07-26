@@ -2,10 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import Cards from "./dbCards.js";
 import Cors from "cors";
+
+require('dotenv').config();
+
 // App config
 
 const app = express();
-const connection_url = "mongodb+srv://admin:Y8WdG4ueHTPBSeeD@cluster0.8bb5a.mongodb.net/tinderDB?retryWrites=true&w=majority"
+const connection_url = "mongodb+srv://admin:"+process.env.SECRET+"@cluster0.8bb5a.mongodb.net/tinderDB?retryWrites=true&w=majority"
 
 // Middlewares
 app.use(express.json());
