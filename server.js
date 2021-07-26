@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import Cards from "./dbCards.js";
 import Cors from "cors";
-
-require('dotenv').config();
+// import dotenv from 'dotenv';
+// import auth from './env.js';
 
 // App config
 
@@ -13,7 +13,7 @@ const connection_url = "mongodb+srv://admin:Y8WdG4ueHTPBSeeD@cluster0.8bb5a.mong
 // Middlewares
 app.use(express.json());
 app.use(Cors());
-
+// dotenv.config();
 
 // DB config
 mongoose.connect(connection_url,{
